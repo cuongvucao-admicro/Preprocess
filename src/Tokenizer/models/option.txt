@@ -1,0 +1,17 @@
+trainDataFile=train.tagged
+testDataFile=test.tagged
+trainLogFile=trainlog.txt
+modelFile=model.txt
+order=1
+
+numIterations=135
+
+fRareThreshold=1
+cpRareThreshold=1
+
+sigmaSquare=10
+
+evaluateDuringTraining=1
+
+chunktype=IOB2
+chunk=B_W:I_W:word
