@@ -34,8 +34,8 @@ public class MakeData {
 	private static HashMap<String, Integer> listNegWord_local = new HashMap<String, Integer>();
 	private static HashMap<String, Integer> library = new HashMap<String, Integer>();
 
-	private static final String pathPosWord = "file/NEW_POS.txt";
-	private static final String pathNegWord = "file/NEW_NEG.txt";
+	private static final String pathPosWord = "./file/NEW_POS.txt";
+	private static final String pathNegWord = "./file/NEW_NEG.txt";
 
 	public void readLibrary() throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(pathLibrary), "UTF8"));

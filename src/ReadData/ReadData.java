@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
@@ -28,8 +29,8 @@ import TextUtils.TextUtils;
 public class ReadData {
 	private static Constant constant = new Constant();
 	private static String path = constant.data_set + "/01.raw/";
-	private static String fileRmCate = "file/removedCategory.txt";
-	private static String fileRmWord = "file/removedWord.txt";
+	public InputStream fileRmCate = getClass().getResourceAsStream("./file/removedCategory.txt");
+	public InputStream fileRmWord = getClass().getResourceAsStream("./file/removedWord.txt");
 	private static HashMap<String, Integer> listCateRemove = new HashMap<String, Integer>();
 	private static HashMap<String, Integer> listWordRemove = new HashMap<String, Integer>();
 	private TextUtils textUtils;
@@ -119,8 +120,8 @@ public class ReadData {
 		}
 	}
 
-	public static void readRmCate() throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileRmCate), "UTF8"));
+	public void readRmCate() throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(fileRmCate, "UTF8"));
 		String str;
 		while ((str = in.readLine()) != null) {
 			listCateRemove.put(str, 1);
@@ -128,8 +129,8 @@ public class ReadData {
 		in.close();
 	}
 
-	public static void readRmWord() throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileRmWord), "UTF8"));
+	public void readRmWord() throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(fileRmWord, "UTF8"));
 		String str;
 		while ((str = in.readLine()) != null) {
 			listWordRemove.put(str, 1);

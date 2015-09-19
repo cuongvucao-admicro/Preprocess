@@ -20,10 +20,10 @@ public class AddSwapWord {
 	private Constant constant = new Constant();
 	private String pathPre = constant.data_set  + "/04.tokenizer/";
 	private String path = constant.data_set + "/05.addSwapWord/";
-	private static final String pathSwapWord = "file/swapword.txt";
-	private static final String pathDownWord = "file/downword.txt";
-	private static final String pathPosWord = "file/NEW_POS.txt";
-	private static final String pathNegWord = "file/NEW_NEG.txt";
+	private static final String pathSwapWord = "./file/swapword.txt";
+	private static final String pathDownWord = "./file/downword.txt";
+	private static final String pathPosWord = "./file/NEW_POS.txt";
+	private static final String pathNegWord = "./file/NEW_NEG.txt";
 	private BufferedReader in;
 	private static HashMap<String, Integer> listSwapWord = new HashMap<String, Integer>();
 	private static HashMap<String, Integer> listDownWord = new HashMap<String, Integer>();
